@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete position{% endblock title %}
+
+{% block content %}
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Are you sure you want to delete <b>"{{object.title}}"</b> ?</p>
+        <button type="submit" class="btn btn-primary">
+            Yes
+        </button>
+    </form>
+{% endblock content %}
